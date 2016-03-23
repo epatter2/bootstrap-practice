@@ -1,60 +1,418 @@
--<!DOCTYPE html>
- -<html>
- -<head>
- -  
- -<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
- -<script>
- -  window.alert("my first JavaScript");
- -</script>
- -
- -<style>
- -  .container {
- -    background-color:lightgray;
- -    margin-top:30px;
- -    padding-bottom:30px;
- -   }
- -</style>
- -<title>Bootstrap Practice</title>
- -
- -</head>
- -
- -<body>
- -
- -<div class="container-fluid">
- -  <div="row">
- -    <div class="col-sm-6 col-md-6" style="background-color:purple">
- -      <p>Lorem ipsum</p>
- +<div class="container">
- +  <div class="jumbotron">
- +    <h1>My First Bootstrap Page</h1>
- +    <p>Resize this responsive page to see the effect!</p> 
- +  </div>
- +  <div class="row">
- +    <div class="col-sm-4">
- +      <h3>Column 1</h3>
- +      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
- +      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
- -    <div class="col-sm-3 col-md-3">
- -      <p>Lorem ipsum</p>
- +    <div class="col-sm-4">
- +      <h3>Column 2</h3>
- +      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
- +      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
- -    <div class="col-sm-3 col-md-3">
- -      <p>Lorem ipsum</p>
- +    <div class="col-sm-4">
- +      <h3>Column 3</h3> 
- +      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
- +      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide {
+      display: none !important;
+    }
+    
+    ng\:form {
+      display: block;
+    }
+    
+    .ng-animate-block-transitions {
+      transition: 0s all!important;
+      -webkit-transition: 0s all!important;
+    }
+    
+    .ng-hide-add-active,
+    .ng-hide-remove {
+      display: block!important;
+    }
+  </style>
+
+  <title>Star Wars Fansite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LeetCode Online Judge is a platform for preparing technical coding interviews and assessing your knowledge of data structures and algorithms. Pick from our expanding library of more than 160 interview questions to solve. Use our automated tool to get real time feedback on your solution.">
+  <meta property="og:title" content="LeetCode Online Judge">
+  <meta property="og:image" content="https://leetcode.com/images/logolarge.jpg">
+  <meta property="og:description" content="LeetCode Online Judge is a platform for preparing technical coding interviews and assessing your knowledge of data structures and algorithms. Pick from our expanding library of more than 160 interview questions to solve. Use our automated tool to get real time feedback on your solution.">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="https://leetcode.com/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://leetcode.com/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://leetcode.com/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://leetcode.com/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://leetcode.com/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://leetcode.com/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://leetcode.com/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://leetcode.com/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://leetcode.com/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://leetcode.com/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://leetcode.com/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://leetcode.com/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://leetcode.com/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="https://leetcode.com/favicon-192x192.png" sizes="192x192">
+  <meta name="application-name" content="LeetCode Online Judge">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+  <link href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://leetcode.com/static/common/common.css" rel="stylesheet">
+  <link href="https://leetcode.com/static/common/base.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      overflow-y: scroll;
+    }
+    
+    a {
+      color: #0088cc;
+    }
+    
+    a:hover {
+      color: #005580;
+    }
+    
+    .form-signin {
+      max-width: 300px;
+      padding: 19px 29px 29px;
+      margin: 0 auto 20px;
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    }
+    
+    .block-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .message {
+      border: 1px solid #e6db55;
+      background-color: #ffffe0;
+      padding: 15px 30px 15px 15px;
+      margin: 20px 0;
+    }
+    
+    .navbar-extra {
+      border-radius: 0px;
+      margin-bottom: 30px;
+    }
+    
+    #chat-link {
+      position: fixed;
+      right: 5px;
+      bottom: 10px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      padding: 5px 15px 10px 15px;
+      -webkit-border-radius: 5px 0 0 5px;
+      -moz-border-radius: 5px 0 0 5px;
+      -ms-border-radius: 5px 0 0 5px;
+      -o-border-radius: 5px 0 0 5px;
+      border-radius: 5px 0 0 5px;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      color: #979faf;
+    }
+    
+    .glyphicon-envelope {
+      text-align: center;
+      line-height: 26px;
+      margin-right: 5px;
+      position: relative;
+    }
+    
+    [ng-cloak] {
+      display: none;
+    }
+    
+    .editor {
+      font-size: 14px !important;
+      border: 1px solid #e0e0e0;
+      height: 475px;
+    }
+    
+    .ac {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background-image: url('/static/images/correct.png');
+      background-repeat: no-repeat;
+    }
+    
+    .notac {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background-image: url('/static/images/question.png');
+      background-repeat: no-repeat;
+    }
+    
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+      display: block;
+    }
+    
+    #subscribe {
+      background-color: #373737;
+    }
+    
+    @media(min-width: 768px) 
+      .container .navbar-collapse.collapse{
+        position: relative;
+      }
+      .navbar-brand.narrow-display {
+        display: none;
+      }
+      #navBar-right {
+        position: absolute;
+        display: inline-block;
+        right: 0px;
+      }
+      
+      @media(max-width: 767px) 
+        .navbar-brand.narrow-display {
+          display: block;
+        }
+    
+    html,
+    body {
+      height: 100%;
+    }
+    
+    .content-wrapper {
+      box-sizing: border-box;
+      min-height: 100%;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://leetcode.com/static/pages/styles/index.css">
+
+  <link rel="stylesheet" src="//cdn.bootcss.com/bootstrap-table/1.3.0/bootstrap-table.min.css">
+  <style type="text/css"></style>
+</head>
+
+<body>
+
+
+  <span id="fa-check" class="fa" style="display:none"></span>
+
+
+  <div class="content-wrapper" style="padding-bottom: 138px;">
+
+    <div class="navbar navbar-inverse navbar-extra">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand narrow-display" href="epatter2.github.io/bootstrap-practice/">Star Wars</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <a class="navbar-brand" href="http://www.starwars.com/news">News + Blog</a>
+          <ul class="nav navbar-nav">
+
+            <li id="videoNav">
+              <a href="http://www.starwars.com/video">Video</a>
+            </li>
+            
+            <li id="eventsNav"><a onclick="ga('send', 'event', 'pick-one', 'click');" href="http://www.starwars.com/events">Events</a></li>
+
+            <li class="dropdown">
+              <a href="http://www.starwars.com/films" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  Films
+                  <span class="caret"></span>
+                </a>
+              <ul class="dropdown-menu" role="menu">
+
+                <li><a href="http://www.starwars.com/films/star-wars-episode-i-the-phantom-menace">Episode I: The Phantom Menace</a></li>
+
+                <li><a href="http://www.starwars.com/films/star-wars-episode-ii-attack-of-the-clones">Episode II: Attack of the Clones</a></li>
+
+                <li><a href="http://www.starwars.com/films/star-wars-episode-iii-revenge-of-the-sith">Episode III: Revenge of the Sith</a></li>
+                
+                <li><a href="http://www.starwars.com/films/star-wars-episode-iv-a-new-hope">Episode IV: A New Hope</a></li>
+                
+                <li><a href="http://www.starwars.com/films/star-wars-episode-v-the-empire-strikes-back">Episode V: The Empire Strikes Back</a></li>
+                
+                <li><a href="http://www.starwars.com/films/star-wars-episode-vi-return-of-the-jedi">Episode VI: Return of the Jedi</a></li>
+                
+                <li><a href="http://www.starwars.com/films/star-wars-episode-vii-the-force-awakens">Episode VII: The Force Awakens</a></li>
+
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="http://www.starwars.com/tv-shows" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    TV Shows
+                    <span class="caret"></span>
+                  </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://www.starwars.com/tv-shows/star-wars-the-clone-wars">Star Wars: The Clone Wars</a>
+                </li>
+                <li>
+                  <a href="http://www.starwars.com/tv-shows/star-wars-rebels">Star Wars: Rebels</a>
+                </li>
+              </ul>
+            </li>
+
+
+            <li id="games+appsNav"><a href="http://www.starwars.com/games-apps">Games + Apps</a></li>
+            <!-- TODO: not hard code -->
+
+            <li id="communityNav"><a href="http://www.starwars.com/community">Community</a></li>
+
+
+            <li id="bookNav"><a onclick="ga('send', 'event', 'book', 'click', 'nav-bar');" href="http://www.starwars.com/databank">Databank</a></li>
+
+
+
+
+          </ul>
+
+          <div class="navbar-form navbar-right">
+            <a class="btn btn-primary" href="http://www.starwars.com/">Sign up</a>
+            <a class="btn btn-default" href="http://www.starwars.com/">Sign in</a>
+          </div>
+
+          <!--
+            <form class="navbar-form pull-right">
+              <input class="col-md-2" type="text" placeholder="Email">
+              <input class="col-md-2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+            -->
+        </div>
+        <!--/.navbar-collapse -->
       </div>
     </div>
- -  <h1>Bootstrap Practice</h1>
- -  <p>Time for another mini project. Have a cup of coffee and let's continue...</p>
- -  <img src="images/coffee.gif" class="img-rounded"/>
+
+
+
+    <div class="container">
+      <div class="jumbotron">
+
+        <center><h2>Star Wars Fansite</h2></center>
+        <hr>
+        <p>With new <span class="important">Star Wars</span> stories on the horizon, <span class="important">Star Wars: Force for Change</span> 
+        aims to support the immense passion and goodwill of our fans and promote change through inspiration, stories and meaningful partnerships.</p>
+        
+        <p>Star Wars is an American epic space opera franchise, centered on a film series created by George Lucas. It depicts the adventures of various
+        characters "a long time ago in a galaxy far, far away".</p>
+        
+        <p>The events depicted in the Star Wars franchise take place in a fictional galaxy. Many species of alien creatures (often humanoid) are depicted.
+        Robotic droids are also commonplace and are generally built to serve their owners. Space travel is common, and many planets in the galaxy are members
+        of a single galactic government. In the prequel trilogy, this is depicted in the form of the Galactic Republic; at the end of the prequel trilogy and
+        throughout the original trilogy, this government is the Galactic Empire. Preceding and during the sequel trilogy, this government is the New Republic.</p>
+        <div class="paragraph">
+          <p><a href="https://www.instagram.com/starwars/">Follow</a> or <a href="https://www.facebook.com/StarWars/">
+        Like Star Wars</a> and get the <span class="important">latest update</span> when new content is posted!
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/StarWars/"><img src="http://helplaos.com/sites/default/files/facebook-mini-logo.png"> Facebook</a>
+            </li>
+            
+            <li>
+              <a href="https://www.instagram.com/starwars/"><img src="https://www.loudoun.gov/images/pages/N91/instagram%20logo.jpg"> Instagram</a>
+            </li>
+            
+            <li>
+              <a href="https://plus.google.com/+StarWars/posts"><img src="https://fj.purefiji.com/Shared/images/Social/google.png"> Google Plus</a>
+            </li>
+            
+            <li>
+              <a href="https://www.youtube.com/user/starwars"><img src="http://www.campinginontario.ca/images/camping/youTube-20x20.png"> YouTube</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="row">
+          <form class="form" method="POST" action="https://leetcode.com/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="QgKgFRfCJJ1RkHw2VdO7ct0AqXnm4ze0" class="form-control input-lg">
+
+
+
+            <div class="form-group">
+              <div class="col-md-3 no-left-padding">
+                <input autofocus="autofocus" id="id_username" maxlength="30" name="username" placeholder="Username" type="text" class="form-control input-lg">
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <div class="col-md-3 no-left-padding">
+                <input id="id_email" name="email" placeholder="E-mail address" type="email" class="form-control input-lg">
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <div class="col-md-3 no-left-padding">
+                <input id="id_password1" name="password1" placeholder="Password" type="password" class="form-control input-lg">
+              </div>
+            </div>
+
+
+
+
+
+            <div class="col-md-3">
+              <div class="row">
+                <button class="btn btn-primary btn-lg" type="submit">Join The Force For Change</button>
+              </div>
+            </div>
+
+
+
+          </form>
+        </div>
+
+
+
+      </div>
+    </div>
+    <!-- /container -->
+
   </div>
- -   
- -</body>
- -
- -</html>
+
+
+  <footer class="site-footer container" style="margin-top: -138px;">
+    <hr>
+    <p class="text-center">
+      <a href="http://www.starwars.com/search?q=frequently+asked+questions">Frequently Asked Questions</a> |
+      <a href="https://disneytermsofuse.com/">Terms of Use</a>
+    </p>
+    <p class="text-center">
+      <iframe class="iubenda-ibadge" scrolling="no" frameborder="0" allowtransparency="true" style="width:105px; height:22px;"></iframe>
+    </p>
+    <p class="text-center">Copyright © 2016 StarWars</p>
+  </footer>
+
+
+
+
+  <a href="https://help.starwars.com/en_US/Contact" id="chat-link" target="_blank">
+    <i class="glyphicon glyphicon-envelope"></i>Send Feedback</a>
+
+
+
+
+
+</body>
+
+</html>
